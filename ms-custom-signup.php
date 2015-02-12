@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Multisite Custom Signup
  * Description: The wp-signup.php file is notoriously hard to filter/customize. This plugin essentially rebuilds that file with better filters and more flexibility with modifying how it works.
- * Version:     0.1.1
+ * Version:     0.1.2
  * Author:      Aaron Holbrook, 10up
  * Author URI:  http://10up.com
  * License:     GPLv2
