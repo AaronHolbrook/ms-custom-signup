@@ -1,0 +1,21 @@
+{
+	"name": "10up/ms-custom-signup",
+	"description": "The wp-signup.php file is notoriously hard to filter/customize. This plugin essentially rebuilds that file with better filters and more flexibility with modifying how it works.",
+	"type": "wordpress-plugin",
+	"keywords": ["wordpress", "plugin", "multisite", "signup", "registration"],
+	"license": ["MIT"],
+	"authors": [
+		{
+			"name": "Aaron Holbrook",
+			"email": "aaron@10up.com",
+			"homepage": "http://aaronjholbrook.com"
+		},
+		{
+			"name": "10up",
+			"homepage": "http://10up.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4"
+	}
+}
