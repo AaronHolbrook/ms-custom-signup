@@ -26,11 +26,7 @@ namespace MS_Custom_Signup; ?>
 			<input name="user_name" type="text" id="user_name" class="input" size="25" value="<?php echo esc_attr( $user_name ); ?>" maxlength="60"/>
 		</label>
 	</p>
-	<?php
-	// Print error messages related to the user_name
-	if ( $errmsg = $errors->get_error_message( 'user_name' ) ) {
-		printf( '<p class="error">%s</p>', esc_html( $errmsg ) );
-	} ?>
+
 	<p><?php esc_html_e( '(Must be at least 4 characters, letters and numbers only.)', 'ms-custom-signup' ); ?></p>
 	<br class="clear" />
 
@@ -46,17 +42,11 @@ namespace MS_Custom_Signup; ?>
 			       maxlength="200"/>
 		</label>
 	</p>
-	<?php
-	if ( $errmsg = $errors->get_error_message( 'user_email' ) ) {
-		printf( '<p class="error">%s</p>', esc_html( $errmsg ) );
-	} ?>
+
 	<p><?php esc_html_e( 'We send your registration email to this address. (Double-check your email address before continuing.)', 'ms-custom-signup', 'ms-custom-signup' ); ?></p>
 	<br class="clear" />
 
 	<?php
-	if ( $errmsg = $errors->get_error_message( 'generic' ) ) {
-		printf( '<p class="error">%s</p>', esc_html( $errmsg ) );
-	}
 	/**
 	 * Fires at the end of the user registration form on the site sign-up form.
 	 *
@@ -69,7 +59,7 @@ namespace MS_Custom_Signup; ?>
 
 	<p>
 		<?php
-		if ( 'blog' === $active _signup ) {
+		if ( 'blog' === $active_signup ) {
 			printf( '<input id="signupblog" type="hidden" name="signup_for" value="blog"/>' );
 		} else if ( 'user' === $active_signup ) {
 			printf( '<input id="signupblog" type="hidden" name="signup_for" value="user"/>' );
