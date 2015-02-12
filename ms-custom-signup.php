@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Useful global constants
-define( 'MSCS_VERSION', '0.1.0' );
+define( 'MSCS_VERSION', '0.1.2' );
 define( 'MSCS_URL',     plugin_dir_url( __FILE__ ) );
 define( 'MSCS_PATH',    dirname( __FILE__ ) . '/' );
 
