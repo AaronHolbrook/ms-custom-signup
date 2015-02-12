@@ -29,15 +29,24 @@ define( 'MSCS_PATH',    dirname( __FILE__ ) . '/' );
  */
 function signup_replace() {
 
+	if ( ! isset( $_SERVER['SCRIPT_NAME'] ) ) {
+		return;
+	}
+
+	// Only want to perform our load if the script is the wp-signup.php file
+	if ( '/wp-signup.php' !== $_SERVER['SCRIPT_NAME'] ) {
+		return;
+	}
+
 	require_once( MSCS_PATH . 'includes/functions.php' );
 	require_once( MSCS_PATH . 'includes/ms-functions.php' );
 	require_once( MSCS_PATH . 'includes/new-user.php' );
 	require_once( MSCS_PATH . 'includes/new-blog.php' );
 
 	// This replaces the core wp-signup.php file
-	include( MSCS_PATH . 'views/signup-form.php' );
+	require_once( MSCS_PATH . 'includes/signup.php' );
 
 	// All done!
 	exit;
 }
-add_action( 'before_signup_form', '\MS_Custom_Signup\signup_replace', 9999 );
+add_action( 'wp_loaded', '\MS_Custom_Signup\signup_replace', 9999 );
