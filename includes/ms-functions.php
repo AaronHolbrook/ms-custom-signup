@@ -38,6 +38,9 @@ function wpmu_signup_user( $user, $user_email, $meta = array() ) {
 	) );
 
 	wpmu_signup_user_notification( $user, $user_email, $key, $meta );
+
+	// Allow custom functionality upon a user signing up successfully
+	do_action( 'MS_Custom_Signup\wpmu_signup_user', $user, $user_email, $meta, $_REQUEST );
 }
 
 /**
