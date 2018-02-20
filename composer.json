@@ -3,7 +3,7 @@
 	"description": "The wp-signup.php file is notoriously hard to filter/customize. This plugin essentially rebuilds that file with better filters and more flexibility with modifying how it works.",
 	"type": "wordpress-muplugin",
 	"keywords": ["wordpress", "plugin", "multisite", "signup", "registration"],
-	"license": ["GPLv2"],
+	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
 			"name": "Aaron Holbrook",
